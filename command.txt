@@ -1,0 +1,4 @@
+migrate create -seq -ext sql -dir ./cmd/migrate/migrations create_users
+
+
+migrate -path=./cmd/migrate/migrations -database="postgres://root:password@localhost:5433/social?sslmode=disable" up
