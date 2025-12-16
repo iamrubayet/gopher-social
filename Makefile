@@ -2,6 +2,14 @@
 DB_ADDR = "postgres://root:password@localhost:5433/social?sslmode=disable"
 MIGRATIONS_PATH = ./cmd/migrate/migrations
 
+
+.PHONY: run
+run:
+	@go run cmd/api/*.go
+
+
+
+
 .PHONY: test
 test:
 	@go test -v ./...
